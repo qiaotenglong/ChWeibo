@@ -12,6 +12,13 @@
 		A1BB0C8F1E7EAF97007CECDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1BB0C8D1E7EAF97007CECDB /* LaunchScreen.storyboard */; };
 		A1BB0C9A1E7EAF97007CECDB /* ChWeiboTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BB0C991E7EAF97007CECDB /* ChWeiboTests.swift */; };
 		A1BB0CA51E7EAF97007CECDB /* ChWeiboUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BB0CA41E7EAF97007CECDB /* ChWeiboUITests.swift */; };
+		A1BB0DBD1E7EBAE1007CECDB /* ChWeiboMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BB0DBC1E7EBAE1007CECDB /* ChWeiboMainVC.swift */; };
+		A1BB0DBF1E7EBB29007CECDB /* ChWeiboNavigationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BB0DBE1E7EBB29007CECDB /* ChWeiboNavigationVC.swift */; };
+		A1BB0DC11E7EBB67007CECDB /* ChWeiboBaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BB0DC01E7EBB67007CECDB /* ChWeiboBaseVC.swift */; };
+		A1BB0DC31E7EBC51007CECDB /* ChWeiboHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BB0DC21E7EBC51007CECDB /* ChWeiboHomeVC.swift */; };
+		A1BB0DC51E7EBC66007CECDB /* ChWeiboDiscoverVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BB0DC41E7EBC66007CECDB /* ChWeiboDiscoverVC.swift */; };
+		A1BB0DC71E7EBC78007CECDB /* ChWeiboMessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BB0DC61E7EBC78007CECDB /* ChWeiboMessageVC.swift */; };
+		A1BB0DC91E7EBC87007CECDB /* ChWeiboProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BB0DC81E7EBC87007CECDB /* ChWeiboProfileVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +50,13 @@
 		A1BB0CA01E7EAF97007CECDB /* ChWeiboUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChWeiboUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1BB0CA41E7EAF97007CECDB /* ChWeiboUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChWeiboUITests.swift; sourceTree = "<group>"; };
 		A1BB0CA61E7EAF97007CECDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1BB0DBC1E7EBAE1007CECDB /* ChWeiboMainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChWeiboMainVC.swift; sourceTree = "<group>"; };
+		A1BB0DBE1E7EBB29007CECDB /* ChWeiboNavigationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChWeiboNavigationVC.swift; sourceTree = "<group>"; };
+		A1BB0DC01E7EBB67007CECDB /* ChWeiboBaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChWeiboBaseVC.swift; sourceTree = "<group>"; };
+		A1BB0DC21E7EBC51007CECDB /* ChWeiboHomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChWeiboHomeVC.swift; sourceTree = "<group>"; };
+		A1BB0DC41E7EBC66007CECDB /* ChWeiboDiscoverVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChWeiboDiscoverVC.swift; sourceTree = "<group>"; };
+		A1BB0DC61E7EBC78007CECDB /* ChWeiboMessageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChWeiboMessageVC.swift; sourceTree = "<group>"; };
+		A1BB0DC81E7EBC87007CECDB /* ChWeiboProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChWeiboProfileVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +107,7 @@
 		A1BB0C831E7EAF97007CECDB /* ChWeibo */ = {
 			isa = PBXGroup;
 			children = (
+				A1BB0CB81E7EB892007CECDB /* Classes */,
 				A1BB0C841E7EAF97007CECDB /* AppDelegate.swift */,
 				A1BB0C8B1E7EAF97007CECDB /* Assets.xcassets */,
 				A1BB0C8D1E7EAF97007CECDB /* LaunchScreen.storyboard */,
@@ -117,6 +132,92 @@
 				A1BB0CA61E7EAF97007CECDB /* Info.plist */,
 			);
 			path = ChWeiboUITests;
+			sourceTree = "<group>";
+		};
+		A1BB0CB81E7EB892007CECDB /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A1BB0CBB1E7EB892007CECDB /* View(view和控制器) */,
+				A1BB0CBC1E7EB892007CECDB /* ViewModel(视图模型) */,
+				A1BB0CB91E7EB892007CECDB /* Model(模型) */,
+				A1BB0CBA1E7EB892007CECDB /* Tools(工具) */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		A1BB0CB91E7EB892007CECDB /* Model(模型) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Model(模型)";
+			sourceTree = "<group>";
+		};
+		A1BB0CBA1E7EB892007CECDB /* Tools(工具) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Tools(工具)";
+			sourceTree = "<group>";
+		};
+		A1BB0CBB1E7EB892007CECDB /* View(view和控制器) */ = {
+			isa = PBXGroup;
+			children = (
+				A1BB0DB91E7EBABB007CECDB /* Main */,
+				A1BB0DB81E7EBABB007CECDB /* Home */,
+				A1BB0DB71E7EBABB007CECDB /* Discover */,
+				A1BB0DBA1E7EBABB007CECDB /* Message */,
+				A1BB0DBB1E7EBABB007CECDB /* Profile */,
+			);
+			path = "View(view和控制器)";
+			sourceTree = "<group>";
+		};
+		A1BB0CBC1E7EB892007CECDB /* ViewModel(视图模型) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "ViewModel(视图模型)";
+			sourceTree = "<group>";
+		};
+		A1BB0DB71E7EBABB007CECDB /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				A1BB0DC41E7EBC66007CECDB /* ChWeiboDiscoverVC.swift */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		A1BB0DB81E7EBABB007CECDB /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A1BB0DC21E7EBC51007CECDB /* ChWeiboHomeVC.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A1BB0DB91E7EBABB007CECDB /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				A1BB0DBC1E7EBAE1007CECDB /* ChWeiboMainVC.swift */,
+				A1BB0DBE1E7EBB29007CECDB /* ChWeiboNavigationVC.swift */,
+				A1BB0DC01E7EBB67007CECDB /* ChWeiboBaseVC.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		A1BB0DBA1E7EBABB007CECDB /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				A1BB0DC61E7EBC78007CECDB /* ChWeiboMessageVC.swift */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		A1BB0DBB1E7EBABB007CECDB /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				A1BB0DC81E7EBC87007CECDB /* ChWeiboProfileVC.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,6 +355,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1BB0C851E7EAF97007CECDB /* AppDelegate.swift in Sources */,
+				A1BB0DBF1E7EBB29007CECDB /* ChWeiboNavigationVC.swift in Sources */,
+				A1BB0DBD1E7EBAE1007CECDB /* ChWeiboMainVC.swift in Sources */,
+				A1BB0DC71E7EBC78007CECDB /* ChWeiboMessageVC.swift in Sources */,
+				A1BB0DC91E7EBC87007CECDB /* ChWeiboProfileVC.swift in Sources */,
+				A1BB0DC11E7EBB67007CECDB /* ChWeiboBaseVC.swift in Sources */,
+				A1BB0DC31E7EBC51007CECDB /* ChWeiboHomeVC.swift in Sources */,
+				A1BB0DC51E7EBC66007CECDB /* ChWeiboDiscoverVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
