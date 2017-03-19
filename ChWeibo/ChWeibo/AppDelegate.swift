@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //设置根窗口
         window = UIWindow()
         window?.backgroundColor = UIColor.white
-        window?.rootViewController = ChWeiboHomeVC()
+        window?.rootViewController = ChWeiboMainVC()
         window?.makeKeyAndVisible()
         
         return true

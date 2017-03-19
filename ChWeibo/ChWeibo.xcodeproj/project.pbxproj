@@ -57,6 +57,7 @@
 		A1BB0DC41E7EBC66007CECDB /* ChWeiboDiscoverVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChWeiboDiscoverVC.swift; sourceTree = "<group>"; };
 		A1BB0DC61E7EBC78007CECDB /* ChWeiboMessageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChWeiboMessageVC.swift; sourceTree = "<group>"; };
 		A1BB0DC81E7EBC87007CECDB /* ChWeiboProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChWeiboProfileVC.swift; sourceTree = "<group>"; };
+		A1BB0DCA1E7EBF0E007CECDB /* ChWeibo_Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChWeibo_Bridge.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +110,7 @@
 			children = (
 				A1BB0CB81E7EB892007CECDB /* Classes */,
 				A1BB0C841E7EAF97007CECDB /* AppDelegate.swift */,
+				A1BB0DCA1E7EBF0E007CECDB /* ChWeibo_Bridge.h */,
 				A1BB0C8B1E7EAF97007CECDB /* Assets.xcassets */,
 				A1BB0C8D1E7EAF97007CECDB /* LaunchScreen.storyboard */,
 				A1BB0C901E7EAF97007CECDB /* Info.plist */,
@@ -510,6 +512,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = qiao.chuck.ChWeibo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = ChWeibo/Chweibo_Bridge.h;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -524,6 +527,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = qiao.chuck.ChWeibo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = ChWeibo/Chweibo_Bridge.h;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
