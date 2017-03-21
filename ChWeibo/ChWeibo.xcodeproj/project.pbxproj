@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A186994F1E816D50003FCEDF /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A186994E1E816D50003FCEDF /* Bundle+Extension.swift */; };
 		A1BB0C851E7EAF97007CECDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BB0C841E7EAF97007CECDB /* AppDelegate.swift */; };
 		A1BB0C8C1E7EAF97007CECDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1BB0C8B1E7EAF97007CECDB /* Assets.xcassets */; };
 		A1BB0C8F1E7EAF97007CECDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1BB0C8D1E7EAF97007CECDB /* LaunchScreen.storyboard */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A186994E1E816D50003FCEDF /* Bundle+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
 		A1BB0C811E7EAF97007CECDB /* ChWeibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChWeibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1BB0C841E7EAF97007CECDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1BB0C8B1E7EAF97007CECDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -85,6 +87,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A186994D1E816D18003FCEDF /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A186994E1E816D50003FCEDF /* Bundle+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		A1BB0C781E7EAF96007CECDB = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +167,7 @@
 		A1BB0CBA1E7EB892007CECDB /* Tools(工具) */ = {
 			isa = PBXGroup;
 			children = (
+				A186994D1E816D18003FCEDF /* Extension */,
 			);
 			path = "Tools(工具)";
 			sourceTree = "<group>";
@@ -357,6 +368,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1BB0C851E7EAF97007CECDB /* AppDelegate.swift in Sources */,
+				A186994F1E816D50003FCEDF /* Bundle+Extension.swift in Sources */,
 				A1BB0DBF1E7EBB29007CECDB /* ChWeiboNavigationVC.swift in Sources */,
 				A1BB0DBD1E7EBAE1007CECDB /* ChWeiboMainVC.swift in Sources */,
 				A1BB0DC71E7EBC78007CECDB /* ChWeiboMessageVC.swift in Sources */,

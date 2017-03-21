@@ -13,23 +13,44 @@ class ChWeiboMainVC: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let infoArray = [
+            ["class":"ChWeiboHomeVC","title":"首页","image":"tabbar_home"],
+            ["class":"ChWeiboMessageVC","title":"消息","image":"tabbar_message_center"],
+            ["class":"ChWeiboDiscoverVC","title":"发现","image":"tabbar_discover"],
+            ["class":"ChWeiboProfileVC","title":"我","image":"tabbar_profile"],
+        ]
+        
+        var arrayM = [UIViewController]()
+        for params in infoArray {
+            arrayM.append(controllers(params: params))
+        }
+        
+        self.viewControllers = arrayM
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func controllers(params:[String:String]) -> UIViewController {
+        
+        guard let _ = params["class"],
+              let title = params["title"],
+              let image = params["image"],
+              let vcs = NSClassFromString(Bundle.main.classNameWithNamespace(clasz:params["class"]!)) as? UIViewController.Type
+            else {
+            return UIViewController()
+        }
+    
+        let vc  = vcs.init()
+        vc.title = title
+        let nav = ChWeiboNavigationVC(rootViewController: vc)
+        
+        // 设置tabbar 图片&字体颜色
+        nav.tabBarItem.image = UIImage.init(named: image)
+        nav.tabBarItem.selectedImage = UIImage.init(named: image + "_selected")?.withRenderingMode(.alwaysOriginal)
+        nav.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName:UIColor.orange], for: .selected)
+        
+        return nav
+        
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
