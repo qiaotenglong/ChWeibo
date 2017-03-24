@@ -10,12 +10,23 @@ import UIKit
 
 class ChWeiboMainVC: UITabBarController {
 
+    private lazy var composeBtn:UIButton = {
+        let btn = UIButton()
+        btn.setBackgroundImage(UIImage.init(named: "tabbar_compose_button"), for: .normal)
+        btn.setBackgroundImage(UIImage.init(named: "tabbar_compose_button_highlighted"), for: .highlighted)
+        btn.setImage(UIImage.init(named: "tabbar_compose_icon_add"), for: .normal)
+        btn.setImage(UIImage.init(named: "tabbar_compose_icon_add"), for: .highlighted)
+        
+        return btn
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         let infoArray = [
             ["class":"ChWeiboHomeVC","title":"首页","image":"tabbar_home"],
             ["class":"ChWeiboMessageVC","title":"消息","image":"tabbar_message_center"],
+            ["class":"UIViewController"],
             ["class":"ChWeiboDiscoverVC","title":"发现","image":"tabbar_discover"],
             ["class":"ChWeiboProfileVC","title":"我","image":"tabbar_profile"],
         ]
@@ -26,18 +37,31 @@ class ChWeiboMainVC: UITabBarController {
         }
         
         self.viewControllers = arrayM
+        
+        setupComposeBtn()
     }
+    
+    //发布微博按钮添加到tabbar
+    func setupComposeBtn() {
+        let width = tabBar.bounds.width / CGFloat((viewControllers?.count)!) - 1.0
+        composeBtn.frame = tabBar.bounds.insetBy(dx: width*2, dy: 0)
+        self.tabBar .addSubview(composeBtn)
+    }
+    
+}
 
-    func controllers(params:[String:String]) -> UIViewController {
+extension ChWeiboMainVC{
+    
+      func controllers(params:[String:String]) -> UIViewController {
         
         guard let _ = params["class"],
-              let title = params["title"],
-              let image = params["image"],
-              let vcs = NSClassFromString(Bundle.main.classNameWithNamespace(clasz:params["class"]!)) as? UIViewController.Type
+            let title = params["title"],
+            let image = params["image"],
+            let vcs = NSClassFromString(Bundle.main.classNameWithNamespace(clasz:params["class"]!)) as? UIViewController.Type
             else {
-            return UIViewController()
+                return UIViewController()
         }
-    
+        
         let vc  = vcs.init()
         vc.title = title
         let nav = ChWeiboNavigationVC(rootViewController: vc)
@@ -51,6 +75,4 @@ class ChWeiboMainVC: UITabBarController {
         
         
     }
-    
-
 }
